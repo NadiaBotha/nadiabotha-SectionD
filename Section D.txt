@@ -1,0 +1,19 @@
+TIME COMPLEXITY - O(n)
+
+The doBracketsMatch function iterates through the length of the string. If the length of the string
+increases, so does the run time. It increases linearly, which is why it is O(n).
+
+The method does call other methods such as push,pop, isEmpty and isSymbol. All of these methods only work 
+with one end/instance of the data structure, meaning that their time complexities are O(1).
+
+The largest time complexity is therefore introduced by the for loop, which is O(n).
+
+SPACE COMPLEXITY - O(1)
+The space complexity is analysed by the amount of space needed to save variable values. In this case the
+doBracketsMatch requires 3 variables, "stack", "isOpeningSymbol", "isClosingSymbol", which has a O(1) complexity.
+
+In the for loop another variable is need - "value", however this is a temporary variable that is replaced with 
+a new value each time the loop is executed. Therefore, this also has a complexity of O(1).
+
+Lastly, becuase the items are popped one at a time, only 1 space is used, meaning that the pop,push and isEmpty 
+functions also introduce a O(1) space complexity.
